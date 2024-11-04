@@ -90,7 +90,47 @@
         command = "setlocal tabstop=2 shiftwidth=2";
       }
     ];
-    plugins.lualine.enable = true;
+    plugins = {
+      cmp = {
+        enable = true;
+        settings = {
+          sources = [
+            {
+              name = "nvim_lsp";
+              keyword_length = 1;
+            }
+            {
+              name = "path";
+              keyword_length = 0;
+            }
+            {
+              name = "buffer";
+              keyword_length = 4;
+            }
+          ];
+          mapping = {
+            "<Up>" = "cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select})";
+            "<Down>" = "cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select})";
+            "<CR>" = "cmp.mapping.confirm({select = false})";
+            "<C-Space>" = "cmp.mapping.confirm({select = true})";
+          };
+        };
+      };
+
+      lsp = {
+        enable = true;
+        servers = {
+          zls.enable = true;
+          clangd.enable = true;
+          eslint.enable = true;
+          nixd.enable = true;
+        };
+      };
+
+      lualine = {
+        enable = true;
+      };
+    };
   };
 
   home.sessionVariables = {
