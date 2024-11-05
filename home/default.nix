@@ -6,6 +6,7 @@
     pavucontrol
     slurp
     wl-clipboard
+    baobab
   ];
 
   wayland.windowManager.river = {
