@@ -29,7 +29,7 @@
           "Super 3" = "set-focused-tags 4";
           "Super+Shift 1" = "set-view-tags 1";
           "Super+Shift 2" = "set-view-tags 2";
-          "Super+Shift 3" = "set-view-tags 3";
+          "Super+Shift 3" = "set-view-tags 4";
         };
       };
       default-layout = "rivertile";
