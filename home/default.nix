@@ -142,8 +142,22 @@
     enable = true;
     interactiveShellInit = ''
       set fish_greeting
+      function fish_prompt_color
+        switch $SHLVL
+          case 1
+            set_color red
+          case 2
+            set_color green
+          case 3
+            set_color blue
+          case 4
+            set_color purple
+          case '*'
+            set_color yellow
+        end
+      end
       function fish_prompt
-        string join "" -- (set_color green) $PWD " " (set_color normal) "> "
+        string join "" -- (fish_prompt_color) $PWD " " (set_color normal) "> "
       end
     '';
   };
