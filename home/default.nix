@@ -123,6 +123,7 @@
         enable = true;
         servers = {
           zls.enable = true;
+          ols.enable = true;
           clangd.enable = true;
           eslint.enable = true;
           nixd.enable = true;
