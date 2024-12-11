@@ -7,6 +7,7 @@
     slurp
     wl-clipboard
     baobab
+    xdg-desktop-portal-wlr
   ];
 
   wayland.windowManager.river = {
