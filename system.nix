@@ -16,6 +16,8 @@
     pulse.enable = true;
   };
 
+  services.tailscale.enable = true;
+
   users = {
     defaultUserShell = pkgs.fish;
     users.arnau = {
